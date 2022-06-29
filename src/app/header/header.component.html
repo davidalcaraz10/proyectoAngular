@@ -1,0 +1,21 @@
+<header>
+    <p>
+        <mat-toolbar color="primary" class="titulo__fuente">
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>dialpad</mat-icon>
+                        <span>Opción 1</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>voicemail</mat-icon>
+                        <span>Opción 2</span>
+                </button>
+            </mat-menu>
+            <span class="titulo__margin">Lista de Alumnos</span>
+        </mat-toolbar>  
+    </p>
+</header> 
+ 
