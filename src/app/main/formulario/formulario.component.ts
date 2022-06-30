@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Alumnos } from 'src/app/interfaces/alumnos';
+import { AlumnosService } from 'src/app/services/alumnos.service';
 
 @Component({
   selector: 'app-formulario',
@@ -7,6 +9,8 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent implements OnInit {
+
+  constructor(private fb: FormBuilder, private alumnosService: AlumnosService) { }
 
   formularioAlumnos = this.fb.group({
     nombre: ['', [Validators.required, Validators.minLength(2)]],
@@ -16,21 +20,20 @@ export class FormularioComponent implements OnInit {
     curso: ['', [Validators.required, Validators.minLength(5)]],
   })
 
-
-  constructor(private fb: FormBuilder) { }
-
   ngOnInit(): void {
   }
 
-  agregarUsuario() {
-    const user = {
+  agregarAlumno() {
+    const alumno: Alumnos = { 
       nombre: this.formularioAlumnos.value.nombre,
       apellido: this.formularioAlumnos.value.apellido,
       email: this.formularioAlumnos.value.email,
       clase: this.formularioAlumnos.value.clase,
       curso: this.formularioAlumnos.value.curso,
     }
-    console.log(user)
+    console.log(alumno)
+    
+    this.alumnosService.agregarAlumno(alumno);
   }
 
 }

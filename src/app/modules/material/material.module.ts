@@ -7,6 +7,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import { MatExpansionModule} from '@angular/material/expansion';
 import { MatTableModule} from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { MatTableModule} from '@angular/material/table';
     MatMenuModule,
     MatExpansionModule,
     MatTableModule,
+    HttpClientModule,
   ]
 })
 export class MaterialModule { }
