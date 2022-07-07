@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+
 import { Alumnos } from '../interfaces/alumnos';
 
 @Injectable({
@@ -19,8 +20,8 @@ export class AlumnosService {
 
   constructor() { }
 
-  getAlumno() {
-    return this.alumnosData.slice();
+  getAlumno(){
+      return this.alumnosData.slice();
   }
 
   agregarAlumno(alumno : Alumnos){

@@ -13,6 +13,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TableComponent } from './main/table/table.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Tt20pxDirective } from './directives/tt20px.directive';
+import { LoginComponent } from './login/login.component';
+import { DashboardModule } from './dashboard/dashboard.module';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import { Tt20pxDirective } from './directives/tt20px.directive';
     FormularioComponent,
     TableComponent,
     Tt20pxDirective,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +35,7 @@ import { Tt20pxDirective } from './directives/tt20px.directive';
     MaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
+    DashboardModule,
   ],
   exports: [
     BrowserModule,
